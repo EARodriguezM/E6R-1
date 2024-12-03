@@ -1,0 +1,328 @@
+General
+	Part Number	link_1_export
+	Part Name	link_1_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	680.695 g
+	Volume	86712.782 mm^3
+	Density	0.008 g / mm^3
+	Area	22617.687 mm^2
+	World X,Y,Z	0.00 mm, 0.00 mm, 0.00 mm
+	Center of Mass	-0.547 mm, 0.00 mm, 19.225 mm
+	Bounding Box
+		Length	72.262 mm
+		Width	72.262 mm
+		Height	56.713 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	3.003E+05
+		Ixy	-1.739
+		Ixz	911.162
+		Iyx	-1.739
+		Iyy	2.883E+05
+		Iyz	-1.923
+		Izx	911.162
+		Izy	-1.923
+		Izz	3.492E+05
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	5.519E+05
+		Ixy	-1.809
+		Ixz	8065.007
+		Iyx	-1.809
+		Iyy	5.401E+05
+		Iyz	0.55
+		Izx	8065.007
+		Izy	0.55
+		Izz	3.494E+05
+
+
+##################################################################################################################
+
+General
+	Part Number	link_2_export
+	Part Name	link_2_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	305.409 g
+	Volume	38905.544 mm^3
+	Density	0.008 g / mm^3
+	Area	19796.066 mm^2
+	World X,Y,Z	0.00 mm, 0.00 mm, 31.533 mm
+	Center of Mass	3.849 mm, 0.00 mm, 77.712 mm
+	Bounding Box
+		Length	45.42 mm
+		Width	44.243 mm
+		Height	95.48 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	2.077E+05
+		Ixy	1.243
+		Ixz	-17466.164
+		Iyx	1.243
+		Iyy	1.984E+05
+		Iyz	-0.281
+		Izx	-17466.164
+		Izy	-0.281
+		Izz	61020.456
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	2.052E+06
+		Ixy	1.646
+		Ixz	-1.088E+05
+		Iyx	1.646
+		Iyy	2.047E+06
+		Iyz	7.864
+		Izx	-1.088E+05
+		Izy	7.864
+		Izz	65544.672
+
+##################################################################################################################
+
+General
+	Part Number	link_3_export
+	Part Name	link_3_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	632.466 g
+	Volume	80568.913 mm^3
+	Density	0.008 g / mm^3
+	Area	44417.156 mm^2
+	World X,Y,Z	5.245 mm, 0.00 mm, 87.713 mm
+	Center of Mass	50.416 mm, 0.00 mm, 151.605 mm
+	Bounding Box
+		Length	72.383 mm
+		Width	44.243 mm
+		Height	183.90 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.930E+06
+		Ixy	-0.269
+		Ixz	-1.954E+05
+		Iyx	-0.269
+		Iyy	2.000E+06
+		Iyz	8.308
+		Izx	-1.954E+05
+		Izy	8.308
+		Izz	2.170E+05
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.647E+07
+		Ixy	4.877
+		Ixz	-5.030E+06
+		Iyx	4.877
+		Iyy	1.814E+07
+		Iyz	23.785
+		Izx	-5.030E+06
+		Izy	23.785
+		Izz	1.825E+06
+
+##################################################################################################################
+
+General
+	Part Number	link_4_export
+	Part Name	link_4_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	538.505 g
+	Volume	68599.329 mm^3
+	Density	0.008 g / mm^3
+	Area	39149.415 mm^2
+	World X,Y,Z	53.902 mm, 0.00 mm, 213.313 mm
+	Center of Mass	9.408 mm, 1.027E-05 mm, 263.40 mm
+	Bounding Box
+		Length	72.971 mm
+		Width	42.285 mm
+		Height	158.106 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	1.213E+06
+		Ixy	0.198
+		Ixz	1.619E+05
+		Iyx	0.198
+		Iyy	1.294E+06
+		Iyz	0.576
+		Izx	1.619E+05
+		Izy	0.576
+		Izz	1.896E+05
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	3.857E+07
+		Ixy	0.146
+		Ixz	-1.173E+06
+		Iyx	0.146
+		Iyy	3.870E+07
+		Iyz	-0.881
+		Izx	-1.173E+06
+		Izy	-0.881
+		Izz	2.373E+05
+
+##################################################################################################################
+
+General
+	Part Number	link_5_export
+	Part Name	link_5_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	189.039 g
+	Volume	24081.379 mm^3
+	Density	0.008 g / mm^3
+	Area	14064.87 mm^2
+	World X,Y,Z	9.367 mm, 0.00 mm, 334.213 mm
+	Center of Mass	39.238 mm, 5.832E-05 mm, 338.077 mm
+	Bounding Box
+		Length	62.14 mm
+		Width	42.285 mm
+		Height	46.07 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	33431.859
+		Ixy	-0.115
+		Ixz	-10841.908
+		Iyx	-0.115
+		Iyy	60177.224
+		Iyz	-0.067
+		Izx	-10841.908
+		Izy	-0.067
+		Izz	58099.396
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	2.164E+07
+		Ixy	-0.547
+		Ixz	-2.519E+06
+		Iyx	-0.547
+		Iyy	2.196E+07
+		Iyz	-3.794
+		Izx	-2.519E+06
+		Izy	-3.794
+		Izz	3.491E+05
+
+##################################################################################################################
+
+General
+	Part Number	link_6_export
+	Part Name	link_6_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State	Working
+	Change Order
+
+Physical
+	Mass	189.039 g
+	Volume	24081.379 mm^3
+	Density	0.008 g / mm^3
+	Area	14064.87 mm^2
+	World X,Y,Z	53.30 mm, 0.00 mm, 343.58 mm
+	Center of Mass	57.164 mm, -5.832E-05 mm, 373.451 mm
+	Bounding Box
+		Length	46.07 mm
+		Width	42.285 mm
+		Height	62.14 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	58099.396
+		Ixy	0.067
+		Ixz	-10841.908
+		Iyx	0.067
+		Iyy	60177.224
+		Iyz	0.115
+		Izx	-10841.908
+		Izy	0.115
+		Izz	33431.859
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	2.642E+07
+		Ixy	0.697
+		Ixz	-4.046E+06
+		Iyx	0.697
+		Iyy	2.704E+07
+		Iyz	4.231
+		Izx	-4.046E+06
+		Izy	4.231
+		Izz	6.512E+05
+
+##################################################################################################################
+
+General
+	Part Number	link_7_export
+	Part Name	link_7_export
+	Description
+	Material Name	Steel
+
+Manage
+	Item Number
+	Lifecycle
+	Revision
+	State
+	Change Order
+
+Physical
+	Mass	83.195 g
+	Volume	10598.118 mm^3
+	Density	0.008 g / mm^3
+	Area	5361.059 mm^2
+	World X,Y,Z	62.667 mm, 0.00 mm, 387.513 mm
+	Center of Mass	79.316 mm, 0.00 mm, 387.438 mm
+	Bounding Box
+		Length	26.833 mm
+		Width	36.00 mm
+		Height	36.00 mm
+	Moment of Inertia at Center of Mass   (g mm^2)
+		Ixx	10576.042
+		Ixy	-0.129
+		Ixz	20.704
+		Iyx	-0.129
+		Iyy	9466.697
+		Iyz	0.203
+		Izx	20.704
+		Izy	0.203
+		Izz	9377.162
+	Moment of Inertia at Origin   (g mm^2)
+		Ixx	1.250E+07
+		Ixy	-1.436
+		Ixz	-2.557E+06
+		Iyx	-1.436
+		Iyy	1.302E+07
+		Iyz	-6.184
+		Izx	-2.557E+06
+		Izy	-6.184
+		Izz	5.328E+05
+
