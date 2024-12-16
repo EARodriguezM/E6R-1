@@ -41,7 +41,7 @@ function solutions = inverseKinematic(robot, gst0, gst_theta)
     % Solve for each joint angle using the Paden-Kahan subproblems and asumming 
     % 8 possible solutions for the kinematic, initialize the solution storage
     
-    solutions = zeros(8, 6)
+    solutions = zeros(8, 6);
     % Step-by-step solving of joint angles
     % Solve for q1 based
     

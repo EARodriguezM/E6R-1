@@ -1,8 +1,8 @@
-function solutions = inverseKinematic(robot, gst0, gst_theta)
-    a2 = robot.a2;
-    a3 = robot.a3;
-    d4 = robot.d4;
-    d5 = robot.d5;
+function solution = inverseKinematic(robot, gst0, gst_theta)
+    a2 = robot(1);
+    a3 = robot(2);
+    d4 = robot(3);
+    d5 = robot(4);
     % Joint twist vectors for each joint
     
     w1 = [0; 0; 1];    % rotation axis of the first joint
@@ -95,6 +95,20 @@ function solutions = inverseKinematic(robot, gst0, gst_theta)
     solutions(1:8,2) = fill_solution(q2_solutions);
     solutions(1:8,3) = fill_solution(q3_solutions);
     solutions(1:8,4) = fill_solution(q4_solutions);
+
+        % Function to find the first row where all values are between -pi and pi
+    
+    % Iterate through each row to check the condition
+    for i = 1:size(solutions, 1)
+        if all(solutions(i, :) >= -pi & solutions(i, :) <= pi)
+            % Return the first row that satisfies the condition
+            solution = solutions(i, :);
+            return;
+        end
+    end
+    
+    % If no valid row is found, return an empty array
+    solution = [90 90 90 90 90 90];
 end
 
 function solutions = fill_solution(q_solutions)
