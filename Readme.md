@@ -1,106 +1,185 @@
-<h1 align="center">ProjectName</h1>
+<h1 align="center">E6R-1: 3D Printed 6-DOF Robotic Arm</h1>
 <div align="center">
 
+*A 6-Degree-of-Freedom robotic arm designed for educational trajectory planning and control, powered by MATLAB/Simulink and ESP32.*
 
-*Project abstract or introduction.*
+<a href="https://github.com/EARodriguezM/E6R-1/stargazers"><img src="https://img.shields.io/github/stars/EARodriguezM/E6R-1" alt="Stars Badge"/></a> 
+<a href="https://github.com/EARodriguezM/E6R-1/network/members"><img src="https://img.shields.io/github/forks/EARodriguezM/E6R-1" alt="Forks Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/pulls"><img src="https://img.shields.io/github/issues-pr/EARodriguezM/E6R-1" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/issues"><img src="https://img.shields.io/github/issues/EARodriguezM/E6R-1" alt="Issues Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/EARodriguezM/E6R-1?color=2b9348"></a>
+<a href="https://github.com/EARodriguezM/E6R-1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/EARodriguezM/E6R-1?color=2b9348" alt="License Badge"/></a> 
 
-<a href="https://github.com/EARodriguezM/E6R-1/stargazers"><img src="https://img.shields.io/github/stars/EARodriguezM/thermo-register" alt="Stars Badge"/></a> 
-<a href="https://github.com/EARodriguezM/E6R-1/network/members"><img src="https://img.shields.io/github/forks/EARodriguezM/thermo-register" alt="Forks Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/pulls"><img src="https://img.shields.io/github/issues-pr/EARodriguezM/thermo-register" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/issues"><img src="https://img.shields.io/github/issues/EARodriguezM/thermo-register" alt="Issues Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/EARodriguezM/thermo-register?color=2b9348"></a>
-<a href="https://github.com/EARodriguezM/E6R-1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/EARodriguezM/thermo-register?color=2b9348" alt="License Badge"/></a> 
-
-<a href="https://github.com/EARodriguezM/E6R-1/blob/main/README-es.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Spanish README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="website"/></a>
-
-<i>Loved the project? Please consider giving a Star ⭐️ to help it improve!</i>
-
+<a href="https://github.com/EARodriguezM/E6R-1/blob/main/README-es.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Spanish README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="website"></a>
 </div>
 
----
+-----
 
-#### Audiovisual material.
+## 📖 Project Overview
 
-In the following links you will find material related to the project:
+The **E6R-1** is a fully printable 6-axis robotic manipulator. It provides a complete development environment for studying robot kinematics, trajectory generation, and embedded control. The system integrates:
 
-> link 1
->
-> link 2
+  * **Mechanical**: A robust 3D-printed structure designed for standard hobby servos.
+  * **Firmware**: Embedded control running on an **ESP32**, interfacing with a **PCA9685** PWM driver.
+  * **Software**: A **MATLAB & Simulink** based Digital Twin for simulation, forward/inverse kinematics solving, and direct hardware-in-the-loop (HIL) control.
 
+-----
 
----
+## 📂 Project Structure
 
->
-> This project provides a complete set of development materials and corresponding code for the development of the system.
->
+### 1. Hardware (`/1.Hardware`)
 
-**Note: Issues discuss topics related to project development, don't send meaningless messages in it, otherwise people who watch the warehouse will receive notification emails, which will cause trouble to others!!! Informal conversations can be discussed in Discuss in the warehouse!**
+Contains the files necessary to build the physical robot:
 
-<!-- **INSERTAR FOTO DEL RESULTADO PRINCIPAL** -->
-<!-- ![](/4.Docs/Images/pictorial_circuit_diagram.png) -->
+  * **Printer files**: STL files for 3D printing (e.g., `base v2.stl`, `drivebig v3.stl`, `link_1.stl`).
+  * **Components**: Geared towards standard ABS/PLA printing.
 
----
+### 2. Firmware (`/2.Firmware`)
 
-### Release Notes:
-**0.0.5 update:**
+Contains the source code and Simulink models for the physical robot controller (ESP32):
 
-* One.
-* Two.
-* Three.
+  * **`Firmware.slx`**: The main Simulink model for the embedded target.
+  * **`mainController.mlapp`**: A MATLAB App Designer GUI for controlling the robot.
+  * **`libraries/PCA9685`**: C++ drivers for the servo controller.
+  * **`kinematics/`**: MATLAB scripts for solving motion (Forward/Inverse).
 
-**Updated on 0.0.1:**
+### 3. Simulation (`/3.Simulation`)
 
-* One.
+A purely virtual environment to test algorithms before deploying to hardware:
 
-### 1. Project files description
+  * **`model.slx`**: The simulation plant model.
+  * **`StartupProject.m`**: Script to initialize the path and environment variables.
 
-#### 1.1 Hardware
+### 4. Documentation (`/5.Documentation`)
 
-In the Hardware folder are the schematic diagrams and PCB files of the circuit used in ___________. Source files in KiCAD format and light drawing files in Gerber format are provided for direct processing by manufacturers.
+  * **`measures.pdf`**: Physical dimensions and Denavit-Hartenberg (DH) parameters of the arm.
 
-#### 1.2 Firmware
+### 5. URDF (`/6.URDF`)
 
-Firmware provides the libraries and firmware source code corresponding to the previous board. The structure folder is a PlatformIO project, so you can find the main code in the [src folder](https://sdfs) and the libraries in the [lib folder](https://sdfsf)
+  * Contains the Unified Robot Description Format file (`robot.urdf`) and meshes for visualization in ROS or MATLAB.
 
-#### 1.3 Software
+-----
 
-The software provides the _______________:
+## 🚀 Getting Started
 
-#### 1.4 CAD-Model
+### Prerequisites
 
-The folder contains the structural design drawings of the ______________. The `.step` general format can be opened and edited in all software; at the same time, in order to satisfy some people who want the original project in Fusion360, I also shared the `.f3d` format source file , the source file contains the complete editing modeling timeline.
+  * MATLAB & Simulink (Recent version recommended, e.g., R2023b+)
+  * Simulink Support Package for Arduino/ESP32
+  * 3D Printer (for hardware reproduction)
 
-#### 1.5 Docs
+### Installation & Setup
 
-Relevant reference documents, including the module's Datasheet, etc.
+1.  **Clone the repository**:
+    ```bash
+    git clone https://github.com/EARodriguezM/E6R-1.git
+    ```
+2.  **Initialize MATLAB Environment**:
+    Open MATLAB, navigate to the `2.Firmware` or `3.Simulation` folder, and run the startup script to add necessary libraries to your path:
+    ```matlab
+    startup
+    % or
+    StartupProject
+    ```
+3.  **Run Simulation**:
+    Open `3.Simulation/model.slx` to visualize the robot behavior in a virtual environment.
 
-### 2. Hardware Architecture Description
+-----
 
-The hardware of the robot is divided into structure and circuit.
+## 🧮 Kinematics & Control
 
-#### 2.1 Structural Design
+This project includes custom scripts for calculating the robot's motion.
 
-In terms of structural design, you can study 3D drawings. The points worth noting are as follows:
+### Forward Kinematics
 
-**How ​​the main components are processed?**
+Calculate the end-effector position based on joint angles.
 
-**Installation order?**
+```matlab
+% Define robot geometry (measures in mm)
+robot.a2 = 427;
+robot.a3 = 328.5;
+robot.d4 = 116.5;
+robot.d5 = 116.5;
 
-#### 2.2 Circuit Design
+% Initial configuration matrix (Home position)
+gst0 = [1 0 0 robot.d4;
+        0 1 0 0;
+        0 0 1 robot.a2 + robot.a3 + robot.d5;
+        0 0 0 1];
 
-There is nothing to analyze the circuit, just look at the schematic diagram.
+% Input angles in degrees
+angles = [60 30 -50 150 20 -100];
 
-**About chip selection?**
+% Compute forward kinematics
+gst_theta = forwardKinematic(robot, gst0, angles);
+disp(gst_theta)
+```
 
-**About the burning method?**
+### Inverse Kinematics
 
-**About ____ selection?**
+Calculate required joint angles to reach a specific point in space.
 
+```matlab
+% Target configuration matrix
+gst_theta = [0.66 -0.71 0.23 223.13;
+             0.70  0.48 -0.52 5.70;
+             0.26  0.51  0.82 603.6;
+             0     0     0    1];
 
-### 3. Software Architecture Description
+% Compute solutions
+solutions = inverseKinematic(robot, gst0, gst_theta);
+disp(rad2deg(solutions))
+```
 
-#### 3.1 Firmware Code
+### Skew Matrix / Twist Calculation
 
-#### 3.2 App Code
+Helper functions are provided to compute transformation matrices using the Product of Exponentials (PoE) formula.
+
+```matlab
+syms a2 a3;
+omega = [1; 0; 0];    % Rotation axis
+r = [0; 0; a2+a3];
+v = cross(r, omega);  % Translation component
+xi = [omega; v];      % Twist
+
+T = computeExponential(xi, -0.9961); % Compute T matrix for joint angle q
+```
+
+-----
+
+## 🛠 Hardware Architecture
+
+### Electronics
+
+  * **Microcontroller**: ESP32 (DevKit V1 recommended)
+  * **Servo Driver**: PCA9685 (I2C 16-channel PWM driver)
+  * **Actuators**: Standard Digital Servos (e.g., MG996R for base, lighter servos for wrist)
+
+### Circuit Design
+
+The ESP32 communicates with the PCA9685 via I2C. The `Firmware.slx` model handles the I2C communication and maps trajectory points to PWM signals.
+
+-----
+
+## 📝 Release Notes
+
+**Current Version: 0.0.5**
+
+  * Added MATLAB App Designer GUI (`mainController.mlapp`).
+  * Integrated Forward/Inverse kinematics scripts.
+  * Updated STL files for `base_rotor` and `connector_straight`.
+
+-----
+
+## 🤝 Contributing
+
+Issues and Pull Requests are welcome!
+
+  * **Issues**: Please use for bug reports or feature requests related to the arm development.
+  * **Discussions**: For general chat or troubleshooting help.
+
+-----
+
+*Created by [EARodriguezM](https://www.google.com/search?q=https://github.com/EARodriguezM)*
 
 ### Some questions have already been answered in Issues, please read open/closed Issues before asking questions.
