@@ -10,7 +10,7 @@
 <a href="https://github.com/EARodriguezM/E6R-1/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/EARodriguezM/E6R-1?color=2b9348"></a>
 <a href="https://github.com/EARodriguezM/E6R-1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/EARodriguezM/E6R-1?color=2b9348" alt="License Badge"/></a> 
 
-<a href="https://github.com/EARodriguezM/E6R-1/blob/main/README-es.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Spanish README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="website"></a>
+<a href="https://github.com/EARodriguezM/E6R-1/blob/main/Readme-es.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Spanish README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="website"></a>
 </div>
 
 -----
@@ -180,6 +180,6 @@ Issues and Pull Requests are welcome!
 
 -----
 
-*Created by [EARodriguezM](https://www.google.com/search?q=https://github.com/EARodriguezM)*
+*Created by [EARodriguezM](https://github.com/EARodriguezM)*
 
 ### Some questions have already been answered in Issues, please read open/closed Issues before asking questions.

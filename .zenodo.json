@@ -1,0 +1,23 @@
+{
+  "title": "E6R-1: 3D-printed 6-DOF robotic arm",
+  "upload_type": "software",
+  "description": "Open-source 6-degree-of-freedom robotic arm for teaching kinematics, trajectory planning and control. Includes 3D-printable STL parts, ESP32 + PCA9685 firmware, MATLAB/Simulink models (forward and inverse kinematics with the product-of-exponentials formulation, a digital twin and hardware-in-the-loop control), a MATLAB App Designer GUI and a URDF description.",
+  "creators": [
+    {
+      "name": "Rodríguez Meléndez, Esteban Andrés",
+      "affiliation": "Universidad Nacional de Colombia, Sede de La Paz"
+    }
+  ],
+  "keywords": [
+    "robotic arm",
+    "6-DOF",
+    "kinematics",
+    "MATLAB",
+    "Simulink",
+    "ESP32",
+    "3D printing",
+    "URDF"
+  ],
+  "access_right": "open",
+  "version": "v0.0.5"
+}

@@ -1,125 +1,191 @@
-<h1 align="center">ProjectName</h1>
+<h1 align="center">E6R-1: Brazo robótico de 6 GDL impreso en 3D</h1>
 <div align="center">
 
+*Brazo robótico de 6 grados de libertad diseñado para la enseñanza de planificación de trayectorias y control, basado en MATLAB/Simulink y ESP32.*
 
-*Project abstract or introduction.*
+<a href="https://github.com/EARodriguezM/E6R-1/stargazers"><img src="https://img.shields.io/github/stars/EARodriguezM/E6R-1" alt="Stars Badge"/></a> 
+<a href="https://github.com/EARodriguezM/E6R-1/network/members"><img src="https://img.shields.io/github/forks/EARodriguezM/E6R-1" alt="Forks Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/pulls"><img src="https://img.shields.io/github/issues-pr/EARodriguezM/E6R-1" alt="Pull Requests Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/issues"><img src="https://img.shields.io/github/issues/EARodriguezM/E6R-1" alt="Issues Badge"/></a>
+<a href="https://github.com/EARodriguezM/E6R-1/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/EARodriguezM/E6R-1?color=2b9348"></a>
+<a href="https://github.com/EARodriguezM/E6R-1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/EARodriguezM/E6R-1?color=2b9348" alt="License Badge"/></a> 
 
-<a href="https://github.com/EARodriguezM/E6R-1/stargazers"><img src="https://img.shields.io/github/stars/EARodriguezM/thermo-register" alt="Stars Badge"/></a> 
-<a href="https://github.com/EARodriguezM/E6R-1/network/members"><img src="https://img.shields.io/github/forks/EARodriguezM/thermo-register" alt="Forks Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/pulls"><img src="https://img.shields.io/github/issues-pr/EARodriguezM/thermo-register" alt="Pull Requests Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/issues"><img src="https://img.shields.io/github/issues/EARodriguezM/thermo-register" alt="Issues Badge"/></a>
-<a href="https://github.com/EARodriguezM/E6R-1/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/EARodriguezM/thermo-register?color=2b9348"></a>
-<a href="https://github.com/EARodriguezM/E6R-1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/EARodriguezM/thermo-register?color=2b9348" alt="License Badge"/></a> 
-
-<a href="https://github.com/EARodriguezM/E6R-1/blob/main/README-es.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=Spanish README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="website"/></a>
-
-<i>¿Te encantó el proyecto? Considere dar una estrella ⭐️ para ayudarlo a mejorar!</i>
-
+<a href="https://github.com/EARodriguezM/E6R-1/blob/main/Readme.md"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=English README &color=%230076D6&style=flat&logo=google-chrome&logoColor=green" alt="English README"></a>
 </div>
 
----
+-----
 
-### Objectivos del proyecto
+## 📖 Descripción general
 
-#### Simulación
-* Diseño del robot
-    * CAD
-    * Hardware
-    * Software
+El **E6R-1** es un manipulador robótico de 6 ejes completamente imprimible. Ofrece un entorno de desarrollo completo para estudiar cinemática de robots, generación de trayectorias y control embebido. El sistema integra:
 
-* Cinematica directa del robot
-    * Matriz de Denavit Hartenberg: Script de MATLAB y Descripción analítica.
+  * **Mecánica**: estructura robusta impresa en 3D, diseñada para servomotores comerciales estándar.
+  * **Firmware**: control embebido en un **ESP32**, conectado a un controlador PWM **PCA9685**.
+  * **Software**: un gemelo digital en **MATLAB y Simulink** para simulación, solución de cinemática directa e inversa y control directo del hardware (*hardware-in-the-loop*, HIL).
 
-* Cinematica inversa del robot 
-    * Descripción analítica (Geometrica/Algebraica).
-    * Trayectoria Simulada del robot: 
-        * Escribiendo una letra en un plano usando Robotic System Toolbox MATLAB
-	    * Escribiendo una letra en un plano con multicuerpo y algoritmo de cinematica inversa (metodo numerico) en MATLAB.
+-----
 
-* Montaje Fisico
-    * Trayectoria calculando en tiempo real la cinematica inversa para cada punto de la trayectora
+## 📂 Estructura del proyecto
 
-#### Material Audiovisual.
+### 1. Hardware (`/1.Hardware`)
 
-En los siguientes enlaces encontrará material relacionado con el proyecto:
-> link 1
->
-> link 2
+Archivos necesarios para construir el robot físico:
 
+  * **Archivos de impresión**: archivos STL para impresión 3D (p. ej., `base v2.stl`, `drivebig v3.stl`, `link_1.stl`).
+  * **Componentes**: pensados para impresión estándar en ABS o PLA.
 
----
+### 2. Firmware (`/2.Firmware`)
 
->
-> Este proyecto proporciona un conjunto completo de materiales de desarrollo y el código correspondiente para el desarrollo del sistema.
->
+Código fuente y modelos de Simulink para el controlador del robot físico (ESP32):
 
-**Nota: Los temas que se discuten están relacionados con el desarrollo del proyecto, no envíe mensajes sin sentido en el mismo, de lo contrario las personas que ven el almacén recibirán correos electrónicos de notificación, lo que causará problemas a los demás!!! Las conversaciones Informales se pueden discutir en Discuss en el warehouse!**
+  * **`Firmware.slx`**: modelo principal de Simulink para el sistema embebido.
+  * **`mainController.mlapp`**: interfaz gráfica en MATLAB App Designer para controlar el robot.
+  * **`libraries/PCA9685`**: controladores en C++ para el driver de servomotores.
+  * **`kinematics/`**: scripts de MATLAB para resolver el movimiento (cinemática directa e inversa).
 
-<!-- **INSERTAR FOTO DEL RESULTADO PRINCIPAL** -->
-<!-- ![](/4.Docs/Images/pictorial_circuit_diagram.png) -->
+### 3. Simulación (`/3.Simulation`)
 
----
+Entorno completamente virtual para probar algoritmos antes de llevarlos al hardware:
 
-### Nota de Versiones:
-**0.0.5 Actualización:**
+  * **`model.slx`**: modelo de simulación de la planta.
+  * **`StartupProject.m`**: script que inicializa las rutas y las variables de entorno.
 
-* One.
-* Two.
-* Three.
+### 4. Documentación (`/5.Documentation`)
 
-**Actualizado en 0.0.1:**
+  * **`measures.pdf`**: dimensiones físicas y parámetros de Denavit-Hartenberg (DH) del brazo.
 
-* One.
+### 5. URDF (`/6.URDF`)
 
-### 1. Descripción de los archivos del proyecto
+  * Archivo de descripción del robot en formato URDF (`robot.urdf`) y mallas para visualización en ROS o MATLAB.
 
-#### 1.1 Hardware
+-----
 
-En la carpeta Hardware se encuentran los diagramas esquemáticos y los archivos PCB del circuito utilizado en ___________. Se proporcionan los archivos fuente en formato KiCAD y los archivos de dibujo ligero en formato Gerber para que puedan ser procesados directamente por los fabricantes.
+## 🚀 Primeros pasos
 
-#### 1.2 Firmware
+### Requisitos
 
-Firmware proporciona las librerías y el código fuente del firmware correspondiente a la placa anterior. La carpeta de estructura es un proyecto PlatformIO, por lo que puedes encontrar el código principal en la [carpeta src](https://sdfs) y las librerías en la [carpeta lib](https://sdfsf)
+  * MATLAB y Simulink (se recomienda una versión reciente, p. ej., R2023b o superior)
+  * Paquete de soporte de Simulink para Arduino/ESP32
+  * Impresora 3D (para reproducir el hardware)
 
-#### 1.3 Software
+### Instalación y configuración
 
-El software proporciona el _______________:
+1.  **Clonar el repositorio**:
+    ```bash
+    git clone https://github.com/EARodriguezM/E6R-1.git
+    ```
+2.  **Inicializar el entorno de MATLAB**:
+    Abra MATLAB, vaya a la carpeta `2.Firmware` o `3.Simulation` y ejecute el script de inicio para agregar las librerías necesarias a la ruta:
+    ```matlab
+    startup
+    % o
+    StartupProject
+    ```
+3.  **Ejecutar la simulación**:
+    Abra `3.Simulation/model.slx` para visualizar el comportamiento del robot en un entorno virtual.
 
-#### 1.4 CAD-Model
+-----
 
-La carpeta contiene los planos de diseño estructural del ______________. El formato general `.step` puede ser abierto y editado en todo el software; al mismo tiempo, con el fin de satisfacer a algunas personas que quieren el proyecto original en Fusion360, también compartí el archivo de origen en formato `.f3d` , el archivo de origen contiene la línea de tiempo completa de modelado de edición.
+## 🧮 Cinemática y control
 
-#### 1.5 Documentos
+El proyecto incluye scripts propios para calcular el movimiento del robot.
 
-Documentos de referencia pertinentes, incluida la hoja de datos del módulo, etc.
+### Cinemática directa
 
-### 2. Descripción de la Arquitectura del Hardware
+Calcula la posición del efector final a partir de los ángulos articulares.
 
-El hardware del robot se divide en estructura y circuito.
+```matlab
+% Geometría del robot (medidas en mm)
+robot.a2 = 427;
+robot.a3 = 328.5;
+robot.d4 = 116.5;
+robot.d5 = 116.5;
 
-#### 2.1 Diseño Estructural
+% Matriz de configuración inicial (posición de reposo)
+gst0 = [1 0 0 robot.d4;
+        0 1 0 0;
+        0 0 1 robot.a2 + robot.a3 + robot.d5;
+        0 0 0 1];
 
-En cuanto al diseño estructural, se pueden estudiar los planos en 3D. Los puntos a destacar son los siguientes:
+% Ángulos de entrada en grados
+angles = [60 30 -50 150 20 -100];
 
-**¿Cómo se procesan los componentes principales?**
+% Cálculo de la cinemática directa
+gst_theta = forwardKinematic(robot, gst0, angles);
+disp(gst_theta)
+```
 
-**Orden de montaje?**
+### Cinemática inversa
 
-#### 2.2 Diseño del Circuito
+Calcula los ángulos articulares necesarios para alcanzar un punto en el espacio.
 
-No es necesario analizar el circuito, basta con mirar el diagrama esquemático.
+```matlab
+% Matriz de configuración objetivo
+gst_theta = [0.66 -0.71 0.23 223.13;
+             0.70  0.48 -0.52 5.70;
+             0.26  0.51  0.82 603.6;
+             0     0     0    1];
 
-**¿Sobre la selección de chips?**
+% Cálculo de las soluciones
+solutions = inverseKinematic(robot, gst0, gst_theta);
+disp(rad2deg(solutions))
+```
 
-**¿Sobre el método de quemado?**
+### Matriz antisimétrica y cálculo de twists
 
-**¿Sobre la selección de ____?**
+Se incluyen funciones auxiliares para calcular matrices de transformación con la fórmula del producto de exponenciales (PoE).
 
+```matlab
+syms a2 a3;
+omega = [1; 0; 0];    % Eje de rotación
+r = [0; 0; a2+a3];
+v = cross(r, omega);  % Componente de traslación
+xi = [omega; v];      % Twist
 
-### 3. Descripción de la Arquitectura del Software
+T = computeExponential(xi, -0.9961); % Matriz T para el ángulo articular q
+```
 
-#### 3.1 Código Firmware
+-----
 
-#### 3.2 Código App
+## 🛠 Arquitectura de hardware
 
-### Algunas preguntas ya han sido contestadas en Issues, por favor lea los Issues abiertos/cerrados antes de hacer preguntas.
+### Electrónica
+
+  * **Microcontrolador**: ESP32 (se recomienda DevKit V1)
+  * **Driver de servomotores**: PCA9685 (controlador PWM de 16 canales por I2C)
+  * **Actuadores**: servomotores digitales estándar (p. ej., MG996R para la base y servos más livianos para la muñeca)
+
+### Diseño del circuito
+
+El ESP32 se comunica con el PCA9685 por I2C. El modelo `Firmware.slx` gestiona la comunicación I2C y convierte los puntos de la trayectoria en señales PWM.
+
+-----
+
+## 📝 Notas de versión
+
+**Versión actual: 0.0.5**
+
+  * Se agregó la interfaz gráfica en MATLAB App Designer (`mainController.mlapp`).
+  * Se integraron los scripts de cinemática directa e inversa.
+  * Se actualizaron los archivos STL de `base_rotor` y `connector_straight`.
+
+-----
+
+## 📚 Cómo citar
+
+Si usa este proyecto, cítelo con los metadatos del archivo [`CITATION.cff`](CITATION.cff).
+
+-----
+
+## 🤝 Contribuciones
+
+¡Los *issues* y *pull requests* son bienvenidos!
+
+  * **Issues**: para reportar errores o proponer mejoras relacionadas con el desarrollo del brazo.
+  * **Discussions**: para conversaciones generales o ayuda con problemas.
+
+-----
+
+*Creado por [EARodriguezM](https://github.com/EARodriguezM)*
+
+### Algunas preguntas ya fueron respondidas en los Issues; revise los Issues abiertos y cerrados antes de preguntar.
